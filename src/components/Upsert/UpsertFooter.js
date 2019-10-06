@@ -9,8 +9,6 @@ export const UpsertFooter = props => {
     const checkDisabledBtn = () => {
         if(!values || Object.values(values).every(i => i === '')) {
             return true
-        } else if (values) {
-
         }else if(errors) {
             return Object.values(errors).includes(false)
         } else {
@@ -50,3 +48,5 @@ export const UpsertFooter = props => {
         </div>
     )
 }
+
+//https://habr.com/ru/post/344802/

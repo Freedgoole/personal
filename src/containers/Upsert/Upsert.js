@@ -14,22 +14,20 @@ import { StepSecond} from '../../components/Upsert/Steps/StepSecond'
 const steps = [
     {
         title: 'First',
-        content: (data, handleChange, values, errors) => 
+        content: (handleChange, values, errors) => 
             <StepFirst 
                 errors={errors} 
                 values={values} 
                 handleChange={handleChange} 
-                data={data}
             />,
     },
     {
         title: 'Second',
-        content: (data,handleChange, values, errors) => 
+        content: (handleChange, values, errors) => 
             <StepSecond 
                 errors={errors} 
                 values={values} 
                 handleChange={handleChange} 
-                data={data}
             />,
     },
 ];
@@ -75,7 +73,7 @@ const Upsert = props => {
             <div className="steps-content">
                 { 
                     steps[currentStep]
-                    .content(mainMedicationSheet, handleChange, values, errors)
+                    .content(handleChange, values, errors)
                 }
             </div>
             <UpsertFooter 

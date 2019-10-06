@@ -7,13 +7,13 @@ const { TextArea } = Input;
 export const StepSecond = props => {
 
     // useForm 
-    const {handleChange, values} = props;
+    const {handleChange, values, errors} = props;
 
     return (
         <Fragment>
         <FormField 
         label='Composition and releases form' 
-        validateStatus='error' 
+        validationStatus={errors && errors.composition}
         helpMsg="string from 0 to 2000 characters"
         >
             <TextArea
@@ -27,7 +27,7 @@ export const StepSecond = props => {
         </FormField>
         <FormField 
         label='Indication' 
-        validateStatus='error' 
+        validationStatus={errors && errors.indication}
         helpMsg="string from 0 to 2000 characters"
         >
             <TextArea
@@ -41,7 +41,7 @@ export const StepSecond = props => {
         </FormField>   
         <FormField 
         label='Contraindication' 
-        validateStatus='error' 
+        validationStatus={errors && errors.controlled}
         helpMsg="string from 0 to 2000 characters"
         >
             <TextArea
