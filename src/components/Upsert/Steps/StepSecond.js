@@ -48,7 +48,7 @@ export const StepSecond = props => {
             placeholder="controlled"
             autosize={false}
             name='controlled'
-            alue={values && values.controlled}
+            value={values && values.controlled}
             onChange={handleChange}
             style={{height: 80}}
             />

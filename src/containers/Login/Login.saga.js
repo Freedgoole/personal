@@ -3,7 +3,7 @@ import { push } from 'connected-react-router'
 import firebase from '../../Firebase/Firebase.conf';
 
 import { LOGIN, MAIN, LOADER } from '../store/constans'
-import { message } from 'antd';
+import { message, notification } from 'antd';
 
 function * authorization ({ payload }) {
     const { name, password  } = payload;
@@ -12,6 +12,7 @@ function * authorization ({ payload }) {
         let data = yield firebase.auth().signInWithEmailAndPassword(name,password)
         yield put({ type: LOGIN.STORE.LOGIN_STATUS, payload: true});
         yield put({ type: LOGIN.STORE.LOGIN_DATA, payload: data});
+        notification.open({message: 'Welcome!',description: data.user.email,duration: 0});
         yield put(push(MAIN.ROUTES.MAIN));
     } catch(e) {
         const {message : messageTxt} = e;

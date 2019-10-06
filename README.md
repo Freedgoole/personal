@@ -62,7 +62,7 @@ Project structure:
         Routes
             Private page: Main , Upsert 
                 important props: loginStatus (true/false)
-            Page: Login 
+            Page: Login , 404
 
         Login
         important props: loginStatus (true/false), loginAuthorization (func)

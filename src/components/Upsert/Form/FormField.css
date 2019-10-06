@@ -1,6 +1,5 @@
 .form-field-container {
     display: flex;
-    align-items: center;
     padding: 0.3rem 0;
 }
 .form-field--label {
@@ -8,7 +7,6 @@
 }
 .form-field--input {
     flex: 3;
-    height: 40px;
 }
 .form-field--input .ant-form-item {
     margin-bottom: 0
@@ -19,6 +17,7 @@
 .form-field-input-valid-msg {
     color: red;
     opacity: 0;
+    font-size: 11px;
     transition: 0.2s;
     -webkit-transition: 0.2s;
     -moz-transition: 0.2s;
@@ -27,7 +26,6 @@
 }
 .form-field-input-valid-msg.fail {
     opacity: 1;
-    font-size: 11px;
 }
 .form-field--input textarea {
     resize: none; 

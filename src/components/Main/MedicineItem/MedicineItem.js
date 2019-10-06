@@ -15,15 +15,15 @@ export const MedicineItem = props => {
         <div className='m-item-container' onDoubleClick={edit}>
             <div className='m-item m-item--code'>
                 <span className='m-item m-item--label'>code: </span>
-                <span className='m-item m-item--value'>{code}</span>
+                <span className='m-item m-item--value'>{code ? code : '---'}</span>
             </div>
             <div className='m-item m-item--name'>
                 <span className='m-item m-item--label'>name: </span>
-                <span className='m-item m-item--value'>{name}</span>
+                <span className='m-item m-item--value'>{name ? name : '---'}</span>
             </div>
             <div className='m-item m-item--price'>
                 <span className='m-item m-item--label'>price: </span>
-                <span className='m-item m-item--value'>{price}</span>
+                <span className='m-item m-item--value'>{price ? price : '---'}</span>
             </div>
             <div className='m-item--btns'>
                 <Button onClick={edit} className='m-item--btns-edit'>Edit</Button>

@@ -10,7 +10,7 @@ import Upsert from '../Upsert/Upsert'
 import Main from '../Main/Main'
 import Login from '../Login/Login'
 import PrivateRoute from '../routes/PrivatRoutes'
-
+import NoMatch from '../NoMatch/NoMatch'
 import {connect} from "react-redux";
 
 const  Routes = props => {
@@ -38,6 +38,7 @@ return (
                     path={LOGIN.ROUTES.LOGIN} 
                     component={Login} 
                 />
+                <Route component={NoMatch}/>
             </Switch>
         </ConnectedRouter>
     </BrowserRouter>

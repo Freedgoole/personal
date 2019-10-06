@@ -12,7 +12,7 @@
     margin: 0 auto;
 }
 .steps-content {
-    height: 410px;
+    height: 300px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;;
@@ -23,6 +23,10 @@
     padding: 1rem 0;
 }
 @media screen and (max-width: 768px) {
+
+    .steps-content {
+        height: 410px;
+    }
     .steps-container {
        padding: 0 1rem;
     }

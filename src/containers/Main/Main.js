@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { Layout } from 'antd'
+import { Layout, Empty } from 'antd'
 // components
 import { CreateButton } from '../../components/Main/CreateButton/CreateButton'
 import {connect} from "react-redux";
@@ -22,9 +22,13 @@ const Main = props => {
 
     const handleEdit = code => editDataItem(code)
 
+    const checkMainMedicationSheet = Object.keys(mainMedicationSheet).length === 0;
+    
     return (
         <Content className='main-content'>
             { 
+                checkMainMedicationSheet
+                ? <Empty /> :
                 Object.keys(mainMedicationSheet).map( item => (
                     <MedicineItem 
                         id={item} 
@@ -34,7 +38,10 @@ const Main = props => {
                         {...mainMedicationSheet[item]}
                     />))
              }
-            <CreateButton onClick={createNewItem}/>
+            <CreateButton 
+                onClick={createNewItem}
+                animation={checkMainMedicationSheet}
+            />
         </Content>
 
     )
