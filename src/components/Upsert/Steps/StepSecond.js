@@ -13,14 +13,14 @@ export const StepSecond = props => {
         <Fragment>
         <FormField 
         label='Composition and releases form' 
-        validationStatus={errors && errors.composition}
+        validationStatus={errors && errors.compositionAndFormOfRelease}
         helpMsg="string from 0 to 2000 characters"
         >
             <TextArea
             placeholder="composition"
-            name='composition'
+            name='compositionAndFormOfRelease'
             onChange={handleChange}
-            value={values && values.composition}
+            value={values && values.compositionAndFormOfRelease}
             autosize={false}
             style={{height: 80}}
             />
@@ -41,14 +41,14 @@ export const StepSecond = props => {
         </FormField>   
         <FormField 
         label='Contraindication' 
-        validationStatus={errors && errors.controlled}
+        validationStatus={errors && errors.сontraindications}
         helpMsg="string from 0 to 2000 characters"
         >
             <TextArea
             placeholder="controlled"
             autosize={false}
-            name='controlled'
-            value={values && values.controlled}
+            name='сontraindications'
+            value={values && values.сontraindications}
             onChange={handleChange}
             style={{height: 80}}
             />

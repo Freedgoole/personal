@@ -39,16 +39,16 @@ function validationForm(name, value) {
   if(name === 'price') {
     return value >= 0.01 && value <= 1000000
   }
-  if(name === 'expiration_date') {
-    return value >= 1 && value <= 100
+  if(name === 'shelfLife') {
+    return value >= 1 && value <= 1000
   }
-  if(name === 'composition') {
+  if(name === 'compositionAndFormOfRelease') {
     return value.length === 0 || (value.length >= 0 && value.length <= 2000)
   }
   if(name === 'indication' ) {
     return value.length === 0 || (value.length >= 0 && value.length <= 2000)
   }
-  if(name === 'controlled') {
+  if(name === 'сontraindications') {
     return value.length === 0 || (value.length >= 0 && value.length <= 2000)
   }
   //

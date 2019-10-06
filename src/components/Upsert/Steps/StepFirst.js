@@ -42,7 +42,6 @@ const {handleChange, values, errors} = props;
         </FormField>
         <FormField 
         label='Price' 
-        validateStatus='error' 
         helpMsg="a number in the range from 0.01 to 1,000,000"
         validationStatus={errors && errors.price}
         >
@@ -58,7 +57,6 @@ const {handleChange, values, errors} = props;
         </FormField>   
         <FormField 
         label='Expiration date' 
-        validateStatus='error' 
         helpMsg="number from 1 to 1000 (days of storage time)"
         validationStatus={errors && errors.expiration_date}
         >
@@ -66,8 +64,8 @@ const {handleChange, values, errors} = props;
                 defaultValue={3}
                 min={1}
                 max={1000}
-                value={values && values.expiration_date}
-                onChange={(e) => handleChange('expiration_date', e)}
+                value={values && values.shelfLife}
+                onChange={(e) => handleChange('shelfLife', e)}
                 />
         </FormField>               
         </Fragment>
