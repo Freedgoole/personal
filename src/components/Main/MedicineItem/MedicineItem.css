@@ -1,0 +1,68 @@
+.m-item-container {
+    display: flex;
+    background-color: var(--main-white-color);
+    border: 1px solid var(--main-light-color);
+    color: var(--main-dark-color);
+    box-shadow: 2px 2px 15px rgba(--main-dark-color, .3);
+    padding: 0.75rem 1rem;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    margin: 1rem 0;
+}
+
+.m-item-container > div {
+    display: flex;
+}
+.m-item {
+    flex-direction: column;
+
+}
+.m-item--label {
+    text-align: left;
+    width: 100%;
+    font-size: 10px;
+    color: grey;
+}
+.m-item--value {
+    white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.m-item--code {
+    flex: 1;
+}
+.m-item--name {
+    overflow: hidden;
+    flex: 2 1 30px;
+    padding-right: 1rem;
+}
+.m-item--price {
+    flex: 1;
+}
+.m-item--btns > Button {
+    margin: 0 7px;
+}
+.m-item--btns .m-item--btns-edit {
+    background-color: var(--main-pale-color);
+    color: var(--main-white-color);
+}
+.m-item--btns .m-item--btns-delete {
+    background-color: var(--main-navy-color);
+    color: var(--main-white-color);
+    border: 1px solid var(--main-white-color);
+}
+
+@media screen and (max-width: 768px) {
+    .m-item-container {
+       flex-direction: column; 
+    }
+    .m-item--btns {
+        margin-top: 1rem;
+    }
+    .m-item--name {
+        overflow: inherit;
+    }
+}

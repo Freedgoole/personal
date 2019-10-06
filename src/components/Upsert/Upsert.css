@@ -1,0 +1,29 @@
+.steps-header--title {
+    display: flex;
+    justify-content: center;
+    padding: 1rem 0;
+}
+.steps-header--title span {
+    font-weight: bold;
+    padding: 0 1rem;
+}
+.steps-container {
+    max-width: 530px;
+    margin: 0 auto;
+}
+.steps-content {
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;;
+}
+.steps-action {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 0;
+}
+@media screen and (max-width: 768px) {
+    .steps-container {
+       padding: 0 1rem;
+    }
+}

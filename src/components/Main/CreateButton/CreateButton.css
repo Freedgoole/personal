@@ -1,0 +1,5 @@
+.create-button--fixed {
+    position: fixed !important;
+    right: 5%;
+    bottom: 5%;
+}
