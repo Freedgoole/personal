@@ -49,7 +49,7 @@ const Upsert = props => {
             let data = mainMedicationSheet[selectedItem];
             setValues(data)
         }
-    }, [selectedItem, mainMedicationSheet, setValues])
+    }, [])
 
     const handleNextFromStep = () => {
         const current = currentStep + 1;
