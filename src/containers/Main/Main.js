@@ -18,7 +18,7 @@ const Main = props => {
     useEffect(()=> {
         getDataAll()
         setSelectedItem(null)
-    },[setSelectedItem, getDataAll])
+    },[])
 
     const handleEdit = code => editDataItem(code)
 
