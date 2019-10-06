@@ -5,11 +5,13 @@ import {Link} from "react-router-dom";
 export const UpsertFooter = props => {
     const { totalSteps, currentStep, errors, values } = props;
     const { handleNext, handlePrev, handleSendDataForNewItem } = props;
-    
+ 
     const checkDisabledBtn = () => {
-        if(!values) {
+        if(!values || Object.values(values).every(i => i === '')) {
             return true
-        } else if(errors) {
+        } else if (values) {
+
+        }else if(errors) {
             return Object.values(errors).includes(false)
         } else {
             return false

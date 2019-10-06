@@ -33,7 +33,7 @@ const Main = props => {
                     <MedicineItem 
                         id={item} 
                         key={item} 
-                        handleEdit={handleEdit} 
+                        handleEditDataItem={handleEdit} 
                         handleDeleteDataItem={deleteDataItem}
                         {...mainMedicationSheet[item]}
                     />))
