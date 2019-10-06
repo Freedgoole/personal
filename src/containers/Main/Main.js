@@ -22,12 +22,12 @@ const Main = props => {
 
     const handleEdit = code => editDataItem(code)
 
-    const checkMainMedicationSheet = Object.keys(mainMedicationSheet).length === 0;
+    const checkEmptyMainMedicationSheet = Object.keys(mainMedicationSheet).length === 0;
     
     return (
         <Content className='main-content'>
             { 
-                checkMainMedicationSheet
+                checkEmptyMainMedicationSheet
                 ? <Empty /> :
                 Object.keys(mainMedicationSheet).map( item => (
                     <MedicineItem 
@@ -40,7 +40,7 @@ const Main = props => {
              }
             <CreateButton 
                 onClick={createNewItem}
-                animation={checkMainMedicationSheet}
+                animation={checkEmptyMainMedicationSheet}
             />
         </Content>
 
