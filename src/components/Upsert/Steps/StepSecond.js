@@ -22,6 +22,7 @@ export const StepSecond = props => {
             onChange={handleChange}
             value={values && values.composition}
             autosize={false}
+            style={{height: 80}}
             />
         </FormField>
         <FormField 
@@ -35,6 +36,7 @@ export const StepSecond = props => {
             name='indication'
             value={values && values.indication}
             onChange={handleChange}
+            style={{height: 80}}
             />
         </FormField>   
         <FormField 
@@ -48,6 +50,7 @@ export const StepSecond = props => {
             name='controlled'
             alue={values && values.controlled}
             onChange={handleChange}
+            style={{height: 80}}
             />
         </FormField>      
         </Fragment>
