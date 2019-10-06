@@ -37,10 +37,10 @@
     .form-field-container {
        flex-direction: column;
     }
-    .form-field-label {
+    .form-field--label {
         margin-bottom: 0.4rem;
     }
-    .form-field-label, .form-field-input {
+    .form-field--label, .form-field--input {
         width: 100%;
     }
 }
