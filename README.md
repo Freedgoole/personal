@@ -3,6 +3,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 In the project directory, you can run in /app: 
 
 npm i
+§
 npm start
 
 Runs the app in the development mode.<br>
@@ -52,19 +53,21 @@ Project structure:
     The main style css /style/app.css
 
     Containers:
-         - Main (list with the ability to edit delete delete read),
-         important props: mainMedicationSheet (obj), getDataAll (func)
-         - Upsert (form CRUD / 2 steps)
-         Important props: mainMedicationSheet (obj) , selectedItem (str)
-         - Routes
-            Private page: 
-                Main 
-                Upsert 
+        Main (list with the ability to edit delete delete read),
+        important props: mainMedicationSheet (obj), getDataAll (func)
+
+        Upsert (form CRUD / 2 steps)
+        Important props: mainMedicationSheet (obj) , selectedItem (str) 
+         
+        Routes
+            Private page: Main , Upsert 
                 important props: loginStatus (true/false)
-            Page: Login   
-         - Login
+            Page: Login 
+
+        Login
         important props: loginStatus (true/false), loginAuthorization (func)
-         - Loader
+
+        Loader
         important props: loaderStatus (true/false)
     
 -------------------------------------------------------------------------------
