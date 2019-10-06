@@ -51,6 +51,8 @@ const {handleChange, values, errors} = props;
                 defaultValue={3}
                 onChange={(e) => handleChange('price', e)}
                 name='price'
+                min={0.01}
+                max={1000000}
                 value={values && values.price}
                 />
         </FormField>   
@@ -62,6 +64,8 @@ const {handleChange, values, errors} = props;
         >
             <InputNumber 
                 defaultValue={3}
+                min={1}
+                max={1000}
                 value={values && values.expiration_date}
                 onChange={(e) => handleChange('expiration_date', e)}
                 />
